@@ -1,0 +1,7 @@
+version: 2
+  jobs:
+    build:
+      machine: true
+      steps:
+        - run: docker run -d -p 8545 stevenzeiler/ganache
+        - run: curl http://127.0.0.1:8545
